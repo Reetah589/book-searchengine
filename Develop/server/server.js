@@ -28,9 +28,12 @@ app.use(routes);
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
-    // log where we can go to test our GQL API
+    // testing GQL API
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
 
-// Tried NPM RUN WATCH in terminal
+// Original Code on Line 28
+db.once('open', () => {
+  app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
+});
